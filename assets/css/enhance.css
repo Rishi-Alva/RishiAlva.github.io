@@ -735,6 +735,24 @@ body {
 	padding-top: 0.15rem;
 }
 
+.recruiter-card--airy .recruiter-card__icon {
+	margin-bottom: 1rem;
+}
+
+.recruiter-card--airy h3 {
+	margin-bottom: 0.75rem;
+	line-height: 1.3;
+}
+
+.recruiter-card--airy p {
+	line-height: 1.72;
+	letter-spacing: 0.01em;
+	padding-top: 0;
+	margin: 0;
+	font-size: 0.95rem;
+	color: #5a6369;
+}
+
 .recruiter-pills {
 	display: flex;
 	flex-wrap: wrap;
@@ -844,6 +862,10 @@ body {
 
 .skill-meter__fill.skill-meter__fill--animate {
 	width: var(--skill);
+}
+
+.skill-meter--ai .skill-meter__fill {
+	background: linear-gradient(90deg, #6d28d9, #8b5cf6, #c4b5fd);
 }
 
 .recruiter-faq {
