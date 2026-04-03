@@ -26,6 +26,15 @@ html {
 		transform: none !important;
 		transition: none !important;
 	}
+	.skill-meter__fill {
+		width: var(--skill) !important;
+		transition: none !important;
+	}
+	#main .recruiter-section .reveal-item {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
 }
 
 body {
