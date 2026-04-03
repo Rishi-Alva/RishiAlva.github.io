@@ -303,6 +303,48 @@ body {
 	transform: scale(1.04);
 }
 
+/* Featured Power BI rows: consistent wide crop */
+#main .post.featured .image.main {
+	aspect-ratio: 2 / 1;
+	max-height: min(52vh, 28rem);
+}
+
+#main .post.featured .image.main img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+/* Prime Video featured row: brand mark on Prime-style backdrop */
+#main .post.featured .image.main.image--prime-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1.5rem;
+	box-sizing: border-box;
+	background:
+		radial-gradient(ellipse 90% 80% at 50% 100%, rgba(0, 168, 225, 0.18) 0%, transparent 55%),
+		linear-gradient(165deg, #050a12 0%, #0f2138 42%, #0a1628 100%);
+}
+
+#main .post.featured .image.main.image--prime-feature img {
+	width: min(92%, 36rem);
+	height: auto;
+	max-height: clamp(4.25rem, 14vw, 10.5rem);
+	object-fit: contain;
+	object-position: center;
+	flex-shrink: 0;
+	filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.45));
+}
+
+@media screen and (min-width: 981px) {
+	#main .post.featured .image.main.image--prime-feature img {
+		max-height: clamp(5rem, 11vw, 12rem);
+	}
+}
+
 #main .button {
 	transition:
 		background-color 0.25s ease,
