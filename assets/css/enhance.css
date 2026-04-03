@@ -1,0 +1,203 @@
+/* Rishi Alva — site enhancements (layered on HTML5 UP Massively) */
+
+:root {
+	--ea-accent: #22d3ee;
+	--ea-accent-dim: rgba(34, 211, 238, 0.35);
+	--ea-radius: 14px;
+	--ea-radius-lg: 22px;
+	--ea-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+	--ea-shadow-hover: 0 28px 60px rgba(15, 23, 42, 0.18);
+	--ea-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	#intro::before {
+		animation: none;
+	}
+	.reveal {
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}
+
+body {
+	font-family: "DM Sans", "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* Hero: subtle color wash + depth */
+#intro {
+	overflow: hidden;
+}
+
+#intro::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background: linear-gradient(
+		160deg,
+		rgba(6, 182, 212, 0.22) 0%,
+		rgba(30, 37, 45, 0.15) 40%,
+		rgba(24, 191, 239, 0.18) 100%
+	);
+	animation: ea-hero-shift 14s ease-in-out infinite alternate;
+}
+
+@keyframes ea-hero-shift {
+	from {
+		opacity: 0.85;
+		transform: scale(1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1.03);
+	}
+}
+
+#intro > * {
+	position: relative;
+	z-index: 1;
+}
+
+#intro h1 {
+	letter-spacing: 0.03em;
+	text-shadow: 0 6px 32px rgba(0, 0, 0, 0.45);
+}
+
+#intro .actions .button {
+	transition:
+		box-shadow 0.35s var(--ea-ease),
+		transform 0.35s var(--ea-ease),
+		color 0.25s ease;
+}
+
+#intro .actions .button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Sticky nav polish */
+#header {
+	transition: box-shadow 0.4s var(--ea-ease), backdrop-filter 0.4s ease;
+}
+
+#nav {
+	transition: border-color 0.35s ease;
+}
+
+#nav ul.links a {
+	position: relative;
+	transition: color 0.25s ease;
+}
+
+#nav ul.links a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, var(--ea-accent), #67e8f9);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.35s var(--ea-ease);
+}
+
+#nav ul.links a:hover::after,
+#nav ul.links li.active a::after {
+	transform: scaleX(1);
+}
+
+#nav ul.icons a {
+	transition:
+		color 0.25s ease,
+		transform 0.3s var(--ea-ease);
+}
+
+#nav ul.icons a:hover {
+	transform: translateY(-3px);
+	color: var(--ea-accent) !important;
+}
+
+/* Project cards */
+#main .post,
+#main .posts article {
+	border-radius: var(--ea-radius-lg);
+	transition:
+		transform 0.45s var(--ea-ease),
+		box-shadow 0.45s var(--ea-ease);
+}
+
+#main .post:hover,
+#main .posts article:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--ea-shadow-hover);
+}
+
+#main .image {
+	overflow: hidden;
+	border-radius: var(--ea-radius);
+}
+
+#main .image img {
+	transition: transform 0.55s var(--ea-ease);
+}
+
+#main .post:hover .image img,
+#main .posts article:hover .image img {
+	transform: scale(1.04);
+}
+
+#main .button {
+	transition:
+		background-color 0.25s ease,
+		box-shadow 0.35s var(--ea-ease),
+		transform 0.25s var(--ea-ease),
+		color 0.25s ease;
+}
+
+#main .button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 28px rgba(24, 191, 239, 0.25);
+}
+
+/* Scroll-in */
+.reveal {
+	opacity: 0;
+	transform: translateY(28px);
+	transition:
+		opacity 0.65s var(--ea-ease),
+		transform 0.65s var(--ea-ease);
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Footer contact strip */
+#footer section.split.contact section {
+	transition: transform 0.3s var(--ea-ease);
+}
+
+#footer section.split.contact section:hover {
+	transform: translateY(-2px);
+}
+
+#footer .icons a {
+	transition: color 0.25s ease, transform 0.3s var(--ea-ease);
+}
+
+#footer .icons a:hover {
+	transform: scale(1.12);
+	color: var(--ea-accent) !important;
+}
