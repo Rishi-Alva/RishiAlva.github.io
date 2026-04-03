@@ -1,0 +1,1376 @@
+{
+  "meta": {
+    "title": "Florida joint replacement hospital charges (MS-DRG 469 & 470)",
+    "dataset_name": "Medicare Inpatient Hospitals by Provider and Service",
+    "dataset_catalog_url": "https://data.cms.gov/provider-summary/hospitals/inpatient-provider-summary-and-charges",
+    "dataset_api_id": "690ddc6c-2767-4618-b277-420ffb2bf27c",
+    "state": "FL",
+    "drg_codes": [
+      469,
+      470
+    ],
+    "drg_short_description": "Major hip and knee joint replacement or reattachment of lower extremity (with and without MCC/complications, per CMS DRG labels in source file)",
+    "generated_at": "2026-04-03T20:29:48.580350+00:00",
+    "headline_spread_covered_charges": 7.27,
+    "methodology": [
+      "Source: CMS Medicare Inpatient Hospitals by Provider and Service via data.cms.gov API.",
+      "Included MS-DRG 469 and 470 only, Florida providers (Rndrng_Prvdr_State_Abrvtn = FL).",
+      "Dropped detail rows with fewer than 10 discharges (CMS suppresses small counts; aligns with public use guidance).",
+      "Aggregated multiple DRG rows per hospital (469 and/or 470) using discharge-weighted averages for dollar fields.",
+      "Dropped hospitals whose combined discharge count across included rows was still below 10.",
+      "Standardized provider name casing with simple title case.",
+      "Average covered charges are hospital list prices as submitted on the claim; they are not patient out-of-pocket costs.",
+      "Average total payments reflect Medicare and other payer amounts in the CMS file; still not the same as a consumer price."
+    ]
+  },
+  "hospitals": [
+    {
+      "provider_ccn": "100069",
+      "provider_name": "Adventhealth Carrollwood",
+      "city": "Tampa",
+      "region": "Tampa Bay",
+      "total_discharges": 14,
+      "avg_covered_charges": 142772.36,
+      "avg_total_payments": 13899.86,
+      "avg_medicare_payments": 12397.29,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100068",
+      "provider_name": "Adventhealth Daytona Beach",
+      "city": "Daytona Beach",
+      "region": "Orlando",
+      "total_discharges": 26,
+      "avg_covered_charges": 94445.38,
+      "avg_total_payments": 13672.88,
+      "avg_medicare_payments": 10979.23,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100072",
+      "provider_name": "Adventhealth Fish Memorial",
+      "city": "Orange City",
+      "region": "Other Florida",
+      "total_discharges": 12,
+      "avg_covered_charges": 64909.75,
+      "avg_total_payments": 12454.75,
+      "avg_medicare_payments": 10854.75,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100137",
+      "provider_name": "Adventhealth Heart Of Florida",
+      "city": "Davenport",
+      "region": "Orlando",
+      "total_discharges": 17,
+      "avg_covered_charges": 225190.35,
+      "avg_total_payments": 12993.12,
+      "avg_medicare_payments": 11487.24,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100007",
+      "provider_name": "Adventhealth Orlando",
+      "city": "Orlando",
+      "region": "Orlando",
+      "total_discharges": 133,
+      "avg_covered_charges": 160459.69,
+      "avg_total_payments": 17005.05,
+      "avg_medicare_payments": 13199.07,
+      "drg_codes": [
+        469,
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100118",
+      "provider_name": "Adventhealth Palm Coast",
+      "city": "Palm Coast",
+      "region": "Orlando",
+      "total_discharges": 19,
+      "avg_covered_charges": 91443.21,
+      "avg_total_payments": 15201.74,
+      "avg_medicare_payments": 13601.74,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100109",
+      "provider_name": "Adventhealth Sebring",
+      "city": "Sebring",
+      "region": "Other Florida",
+      "total_discharges": 13,
+      "avg_covered_charges": 80409.62,
+      "avg_total_payments": 13436.46,
+      "avg_medicare_payments": 11707.69,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100173",
+      "provider_name": "Adventhealth Tampa",
+      "city": "Tampa",
+      "region": "Tampa Bay",
+      "total_discharges": 13,
+      "avg_covered_charges": 130532.23,
+      "avg_total_payments": 13765.23,
+      "avg_medicare_payments": 12284.08,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100057",
+      "provider_name": "Adventhealth Waterman",
+      "city": "Tavares",
+      "region": "Orlando",
+      "total_discharges": 21,
+      "avg_covered_charges": 84904.48,
+      "avg_total_payments": 12744.48,
+      "avg_medicare_payments": 11296.86,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100319",
+      "provider_name": "Adventhealth Wesley Chapel",
+      "city": "Wesley Chapel",
+      "region": "Tampa Bay",
+      "total_discharges": 19,
+      "avg_covered_charges": 125237.63,
+      "avg_total_payments": 15011.11,
+      "avg_medicare_payments": 10558.79,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100025",
+      "provider_name": "Ascension Sacred Heart Pensacola",
+      "city": "Pensacola",
+      "region": "Other Florida",
+      "total_discharges": 53,
+      "avg_covered_charges": 88357.91,
+      "avg_total_payments": 14239.49,
+      "avg_medicare_payments": 12406.28,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100040",
+      "provider_name": "Ascension St Vincent'S Riverside",
+      "city": "Jacksonville",
+      "region": "Jacksonville",
+      "total_discharges": 28,
+      "avg_covered_charges": 128942.86,
+      "avg_total_payments": 13510.25,
+      "avg_medicare_payments": 11569.57,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100307",
+      "provider_name": "Ascension St Vincent'S Southside",
+      "city": "Jacksonville",
+      "region": "Jacksonville",
+      "total_discharges": 17,
+      "avg_covered_charges": 113783.76,
+      "avg_total_payments": 13462.06,
+      "avg_medicare_payments": 11956.18,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100093",
+      "provider_name": "Baptist Hospital",
+      "city": "Pensacola",
+      "region": "Other Florida",
+      "total_discharges": 109,
+      "avg_covered_charges": 95762.45,
+      "avg_total_payments": 13211.84,
+      "avg_medicare_payments": 11368.83,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100117",
+      "provider_name": "Baptist Medical Center - Beaches",
+      "city": "Jacksonville Beach",
+      "region": "Jacksonville",
+      "total_discharges": 12,
+      "avg_covered_charges": 117560.17,
+      "avg_total_payments": 11944.5,
+      "avg_medicare_payments": 10344.5,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100088",
+      "provider_name": "Baptist Medical Center Jacksonville",
+      "city": "Jacksonville",
+      "region": "Jacksonville",
+      "total_discharges": 64,
+      "avg_covered_charges": 103460.95,
+      "avg_total_payments": 17159.16,
+      "avg_medicare_payments": 10443.72,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100002",
+      "provider_name": "Bethesda Hospital East",
+      "city": "Boynton Beach",
+      "region": "Miami metro",
+      "total_discharges": 12,
+      "avg_covered_charges": 134798.92,
+      "avg_total_payments": 14349.67,
+      "avg_medicare_payments": 12882.75,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100168",
+      "provider_name": "Boca Raton Regional Hospital",
+      "city": "Boca Raton",
+      "region": "Miami metro",
+      "total_discharges": 49,
+      "avg_covered_charges": 106284.51,
+      "avg_total_payments": 14556.16,
+      "avg_medicare_payments": 11925.22,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100177",
+      "provider_name": "Cape Canaveral Hospital",
+      "city": "Cocoa Beach",
+      "region": "Orlando",
+      "total_discharges": 13,
+      "avg_covered_charges": 102847.08,
+      "avg_total_payments": 13280.08,
+      "avg_medicare_payments": 11803.15,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100244",
+      "provider_name": "Cape Coral Hospital",
+      "city": "Cape Coral",
+      "region": "Other Florida",
+      "total_discharges": 25,
+      "avg_covered_charges": 110915.2,
+      "avg_total_payments": 13625.2,
+      "avg_medicare_payments": 11421.84,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100289",
+      "provider_name": "Cleveland Clinic Hospital",
+      "city": "Weston",
+      "region": "Miami metro",
+      "total_discharges": 18,
+      "avg_covered_charges": 65315.17,
+      "avg_total_payments": 14884.67,
+      "avg_medicare_payments": 11498.89,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100105",
+      "provider_name": "Cleveland Clinic Indian River Hospital",
+      "city": "Vero Beach",
+      "region": "Other Florida",
+      "total_discharges": 20,
+      "avg_covered_charges": 62431.25,
+      "avg_total_payments": 13357.0,
+      "avg_medicare_payments": 10757.8,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100044",
+      "provider_name": "Cleveland Clinic Martin North Hospital",
+      "city": "Stuart",
+      "region": "Other Florida",
+      "total_discharges": 25,
+      "avg_covered_charges": 73407.04,
+      "avg_total_payments": 12760.36,
+      "avg_medicare_payments": 11352.36,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100258",
+      "provider_name": "Delray Medical Center",
+      "city": "Delray Beach",
+      "region": "Miami metro",
+      "total_discharges": 22,
+      "avg_covered_charges": 225947.64,
+      "avg_total_payments": 11120.32,
+      "avg_medicare_payments": 9606.68,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100296",
+      "provider_name": "Doctors Hospital",
+      "city": "Coral Gables",
+      "region": "Miami metro",
+      "total_discharges": 95,
+      "avg_covered_charges": 95930.32,
+      "avg_total_payments": 15456.12,
+      "avg_medicare_payments": 12235.57,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100090",
+      "provider_name": "Flagler Hospital",
+      "city": "Saint Augustine",
+      "region": "Jacksonville",
+      "total_discharges": 34,
+      "avg_covered_charges": 50910.56,
+      "avg_total_payments": 14274.32,
+      "avg_medicare_payments": 12816.79,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100287",
+      "provider_name": "Good Samaritan Medical Center",
+      "city": "West Palm Beach",
+      "region": "Miami metro",
+      "total_discharges": 38,
+      "avg_covered_charges": 211472.71,
+      "avg_total_payments": 13107.87,
+      "avg_medicare_payments": 11592.08,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100266",
+      "provider_name": "Gulf Breeze Hospital",
+      "city": "Gulf Breeze",
+      "region": "Other Florida",
+      "total_discharges": 13,
+      "avg_covered_charges": 104342.31,
+      "avg_total_payments": 15593.31,
+      "avg_medicare_payments": 14239.46,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100017",
+      "provider_name": "Halifax Health Medical Center",
+      "city": "Daytona Beach",
+      "region": "Orlando",
+      "total_discharges": 26,
+      "avg_covered_charges": 90240.88,
+      "avg_total_payments": 15528.54,
+      "avg_medicare_payments": 13763.08,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100131",
+      "provider_name": "Hca Florida Aventura Hospital",
+      "city": "Aventura",
+      "region": "Miami metro",
+      "total_discharges": 22,
+      "avg_covered_charges": 153614.95,
+      "avg_total_payments": 16289.09,
+      "avg_medicare_payments": 14822.59,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100213",
+      "provider_name": "Hca Florida Blake Hospital",
+      "city": "Bradenton",
+      "region": "Tampa Bay",
+      "total_discharges": 59,
+      "avg_covered_charges": 118528.81,
+      "avg_total_payments": 14792.93,
+      "avg_medicare_payments": 12904.59,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100254",
+      "provider_name": "Hca Florida Capital Hospital",
+      "city": "Tallahassee",
+      "region": "Other Florida",
+      "total_discharges": 20,
+      "avg_covered_charges": 153119.15,
+      "avg_total_payments": 18774.2,
+      "avg_medicare_payments": 10762.75,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100023",
+      "provider_name": "Hca Florida Citrus Hospital",
+      "city": "Inverness",
+      "region": "Other Florida",
+      "total_discharges": 43,
+      "avg_covered_charges": 182169.16,
+      "avg_total_payments": 15121.51,
+      "avg_medicare_payments": 12267.86,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100267",
+      "provider_name": "Hca Florida Englewood Hospital",
+      "city": "Englewood",
+      "region": "Tampa Bay",
+      "total_discharges": 18,
+      "avg_covered_charges": 192334.39,
+      "avg_total_payments": 12282.06,
+      "avg_medicare_payments": 10682.06,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100236",
+      "provider_name": "Hca Florida Fawcett Hospital",
+      "city": "Port Charlotte",
+      "region": "Other Florida",
+      "total_discharges": 57,
+      "avg_covered_charges": 234684.37,
+      "avg_total_payments": 12120.19,
+      "avg_medicare_payments": 10576.33,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100223",
+      "provider_name": "Hca Florida Fort Walton-Destin Hospital",
+      "city": "Fort Walton Beach",
+      "region": "Other Florida",
+      "total_discharges": 22,
+      "avg_covered_charges": 209520.55,
+      "avg_total_payments": 13300.18,
+      "avg_medicare_payments": 11918.36,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100242",
+      "provider_name": "Hca Florida Gulf Coast Hospital",
+      "city": "Panama City",
+      "region": "Other Florida",
+      "total_discharges": 33,
+      "avg_covered_charges": 214177.24,
+      "avg_total_payments": 13985.18,
+      "avg_medicare_payments": 11501.21,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100080",
+      "provider_name": "Hca Florida Jfk Hospital",
+      "city": "Atlantis",
+      "region": "Miami metro",
+      "total_discharges": 58,
+      "avg_covered_charges": 178044.53,
+      "avg_total_payments": 16821.62,
+      "avg_medicare_payments": 12366.76,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100246",
+      "provider_name": "Hca Florida Lawnwood Hospital",
+      "city": "Fort Pierce",
+      "region": "Other Florida",
+      "total_discharges": 12,
+      "avg_covered_charges": 173218.58,
+      "avg_total_payments": 13884.25,
+      "avg_medicare_payments": 12276.92,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100179",
+      "provider_name": "Hca Florida Memorial Hospital",
+      "city": "Jacksonville",
+      "region": "Jacksonville",
+      "total_discharges": 73,
+      "avg_covered_charges": 203582.56,
+      "avg_total_payments": 13864.0,
+      "avg_medicare_payments": 11749.74,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100167",
+      "provider_name": "Hca Florida Mercy Hospital",
+      "city": "Miami",
+      "region": "Miami metro",
+      "total_discharges": 13,
+      "avg_covered_charges": 145026.69,
+      "avg_total_payments": 15624.15,
+      "avg_medicare_payments": 13894.38,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100204",
+      "provider_name": "Hca Florida North Florida Hospital",
+      "city": "Gainesville",
+      "region": "Other Florida",
+      "total_discharges": 63,
+      "avg_covered_charges": 209560.19,
+      "avg_total_payments": 15361.57,
+      "avg_medicare_payments": 13036.94,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100238",
+      "provider_name": "Hca Florida Northside Hospital",
+      "city": "Saint Petersburg",
+      "region": "Tampa Bay",
+      "total_discharges": 21,
+      "avg_covered_charges": 182962.14,
+      "avg_total_payments": 15454.67,
+      "avg_medicare_payments": 12049.9,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100264",
+      "provider_name": "Hca Florida Oak Hill Hospital",
+      "city": "Brooksville",
+      "region": "Other Florida",
+      "total_discharges": 45,
+      "avg_covered_charges": 214655.47,
+      "avg_total_payments": 15793.89,
+      "avg_medicare_payments": 12625.36,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100212",
+      "provider_name": "Hca Florida Ocala Hospital",
+      "city": "Ocala",
+      "region": "Orlando",
+      "total_discharges": 120,
+      "avg_covered_charges": 143913.38,
+      "avg_total_payments": 14873.81,
+      "avg_medicare_payments": 12081.06,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100226",
+      "provider_name": "Hca Florida Orange Park Hospital",
+      "city": "Orange Park",
+      "region": "Jacksonville",
+      "total_discharges": 24,
+      "avg_covered_charges": 211870.12,
+      "avg_total_payments": 15631.75,
+      "avg_medicare_payments": 14231.75,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100126",
+      "provider_name": "Hca Florida Pasadena Hospital",
+      "city": "Saint Petersburg",
+      "region": "Tampa Bay",
+      "total_discharges": 32,
+      "avg_covered_charges": 256468.19,
+      "avg_total_payments": 14276.34,
+      "avg_medicare_payments": 9765.62,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100166",
+      "provider_name": "Hca Florida Sarasota Doctors Hospital",
+      "city": "Sarasota",
+      "region": "Tampa Bay",
+      "total_discharges": 146,
+      "avg_covered_charges": 180919.09,
+      "avg_total_payments": 13301.62,
+      "avg_medicare_payments": 11498.38,
+      "drg_codes": [
+        469,
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100260",
+      "provider_name": "Hca Florida St Lucie Hospital",
+      "city": "Port Saint Lucie",
+      "region": "Other Florida",
+      "total_discharges": 287,
+      "avg_covered_charges": 226569.98,
+      "avg_total_payments": 14814.97,
+      "avg_medicare_payments": 11677.38,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100191",
+      "provider_name": "Hca Florida Trinity Hospital",
+      "city": "Trinity",
+      "region": "Tampa Bay",
+      "total_discharges": 22,
+      "avg_covered_charges": 222964.23,
+      "avg_total_payments": 15324.36,
+      "avg_medicare_payments": 13265.73,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100054",
+      "provider_name": "Hca Florida Twin Cities Hospital",
+      "city": "Niceville",
+      "region": "Other Florida",
+      "total_discharges": 11,
+      "avg_covered_charges": 151746.73,
+      "avg_total_payments": 11928.82,
+      "avg_medicare_payments": 10619.73,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100360",
+      "provider_name": "Hca Florida University Hospital",
+      "city": "Davie",
+      "region": "Miami metro",
+      "total_discharges": 13,
+      "avg_covered_charges": 166671.46,
+      "avg_total_payments": 12757.69,
+      "avg_medicare_payments": 11157.69,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100231",
+      "provider_name": "Hca Florida West Hospital",
+      "city": "Pensacola",
+      "region": "Other Florida",
+      "total_discharges": 44,
+      "avg_covered_charges": 194656.55,
+      "avg_total_payments": 13422.18,
+      "avg_medicare_payments": 10954.48,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100224",
+      "provider_name": "Hca Florida Woodmont Hospital",
+      "city": "Tamarac",
+      "region": "Miami metro",
+      "total_discharges": 20,
+      "avg_covered_charges": 146115.95,
+      "avg_total_payments": 16374.95,
+      "avg_medicare_payments": 11453.15,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100019",
+      "provider_name": "Holmes Regional Medical Center",
+      "city": "Melbourne",
+      "region": "Orlando",
+      "total_discharges": 39,
+      "avg_covered_charges": 112112.18,
+      "avg_total_payments": 13197.77,
+      "avg_medicare_payments": 11706.92,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100073",
+      "provider_name": "Holy Cross Hospital",
+      "city": "Fort Lauderdale",
+      "region": "Miami metro",
+      "total_discharges": 62,
+      "avg_covered_charges": 71142.58,
+      "avg_total_payments": 15649.81,
+      "avg_medicare_payments": 12503.82,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100142",
+      "provider_name": "Jackson Hospital",
+      "city": "Marianna",
+      "region": "Other Florida",
+      "total_discharges": 16,
+      "avg_covered_charges": 35288.25,
+      "avg_total_payments": 13591.5,
+      "avg_medicare_payments": 11994.25,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100253",
+      "provider_name": "Jupiter Medical Center",
+      "city": "Jupiter",
+      "region": "Miami metro",
+      "total_discharges": 61,
+      "avg_covered_charges": 69132.02,
+      "avg_total_payments": 12347.36,
+      "avg_medicare_payments": 10490.93,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100157",
+      "provider_name": "Lakeland Regional Medical Center",
+      "city": "Lakeland",
+      "region": "Tampa Bay",
+      "total_discharges": 63,
+      "avg_covered_charges": 83931.95,
+      "avg_total_payments": 13655.19,
+      "avg_medicare_payments": 12114.78,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100299",
+      "provider_name": "Lakewood Ranch Medical Center",
+      "city": "Bradenton",
+      "region": "Tampa Bay",
+      "total_discharges": 31,
+      "avg_covered_charges": 196135.32,
+      "avg_total_payments": 12331.29,
+      "avg_medicare_payments": 10782.9,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100012",
+      "provider_name": "Lee Memorial Hospital",
+      "city": "Fort Myers",
+      "region": "Other Florida",
+      "total_discharges": 237,
+      "avg_covered_charges": 104238.27,
+      "avg_total_payments": 15760.08,
+      "avg_medicare_payments": 13019.06,
+      "drg_codes": [
+        469,
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100150",
+      "provider_name": "Lower Keys Medical Center",
+      "city": "Key West",
+      "region": "Other Florida",
+      "total_discharges": 34,
+      "avg_covered_charges": 144820.26,
+      "avg_total_payments": 20084.03,
+      "avg_medicare_payments": 16968.59,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100035",
+      "provider_name": "Manatee Memorial Hospital",
+      "city": "Bradenton",
+      "region": "Tampa Bay",
+      "total_discharges": 13,
+      "avg_covered_charges": 208111.0,
+      "avg_total_payments": 15196.0,
+      "avg_medicare_payments": 13492.92,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100151",
+      "provider_name": "Mayo Clinic",
+      "city": "Jacksonville",
+      "region": "Jacksonville",
+      "total_discharges": 45,
+      "avg_covered_charges": 62713.53,
+      "avg_total_payments": 18586.62,
+      "avg_medicare_payments": 12707.42,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100043",
+      "provider_name": "Mease Dunedin Hospital",
+      "city": "Dunedin",
+      "region": "Tampa Bay",
+      "total_discharges": 12,
+      "avg_covered_charges": 84596.67,
+      "avg_total_payments": 13188.33,
+      "avg_medicare_payments": 11588.33,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100291",
+      "provider_name": "Melbourne Regional Medical Center",
+      "city": "Melbourne",
+      "region": "Orlando",
+      "total_discharges": 65,
+      "avg_covered_charges": 178309.02,
+      "avg_total_payments": 12201.14,
+      "avg_medicare_payments": 10650.37,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100281",
+      "provider_name": "Memorial Hospital West",
+      "city": "Pembroke Pines",
+      "region": "Miami metro",
+      "total_discharges": 14,
+      "avg_covered_charges": 75608.57,
+      "avg_total_payments": 15906.29,
+      "avg_medicare_payments": 13891.93,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100127",
+      "provider_name": "Morton Plant Hospital",
+      "city": "Clearwater",
+      "region": "Tampa Bay",
+      "total_discharges": 22,
+      "avg_covered_charges": 79788.41,
+      "avg_total_payments": 13648.0,
+      "avg_medicare_payments": 12292.82,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100034",
+      "provider_name": "Mount Sinai Medical Center Of Florida, Inc",
+      "city": "Miami Beach",
+      "region": "Miami metro",
+      "total_discharges": 22,
+      "avg_covered_charges": 71899.5,
+      "avg_total_payments": 16464.91,
+      "avg_medicare_payments": 14235.32,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100018",
+      "provider_name": "Naples Community Hospital",
+      "city": "Naples",
+      "region": "Other Florida",
+      "total_discharges": 187,
+      "avg_covered_charges": 66571.06,
+      "avg_total_payments": 13722.59,
+      "avg_medicare_payments": 11843.73,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100032",
+      "provider_name": "Orlando Health Bayfront Hospital",
+      "city": "Saint Petersburg",
+      "region": "Tampa Bay",
+      "total_discharges": 20,
+      "avg_covered_charges": 153251.55,
+      "avg_total_payments": 17076.5,
+      "avg_medicare_payments": 12656.25,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100006",
+      "provider_name": "Orlando Health Orlando Regional Medical Center",
+      "city": "Orlando",
+      "region": "Orlando",
+      "total_discharges": 572,
+      "avg_covered_charges": 152833.59,
+      "avg_total_payments": 17115.48,
+      "avg_medicare_payments": 14190.25,
+      "drg_codes": [
+        469,
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100051",
+      "provider_name": "Orlando Health South Lake Hospital",
+      "city": "Clermont",
+      "region": "Orlando",
+      "total_discharges": 97,
+      "avg_covered_charges": 138847.22,
+      "avg_total_payments": 14170.76,
+      "avg_medicare_payments": 10809.08,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100030",
+      "provider_name": "Orlando Health-Health Central Hospital",
+      "city": "Ocoee",
+      "region": "Orlando",
+      "total_discharges": 48,
+      "avg_covered_charges": 134691.77,
+      "avg_total_payments": 14136.42,
+      "avg_medicare_payments": 11595.67,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100329",
+      "provider_name": "Oviedo Medical Center",
+      "city": "Oviedo",
+      "region": "Orlando",
+      "total_discharges": 24,
+      "avg_covered_charges": 179128.42,
+      "avg_total_payments": 14828.58,
+      "avg_medicare_payments": 11891.71,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100316",
+      "provider_name": "Palm Bay Hospital",
+      "city": "Palm Bay",
+      "region": "Orlando",
+      "total_discharges": 17,
+      "avg_covered_charges": 97851.29,
+      "avg_total_payments": 13349.94,
+      "avg_medicare_payments": 11844.06,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100176",
+      "provider_name": "Palm Beach Gardens Medical Center",
+      "city": "Palm Beach Gardens",
+      "region": "Miami metro",
+      "total_discharges": 19,
+      "avg_covered_charges": 202322.84,
+      "avg_total_payments": 12153.0,
+      "avg_medicare_payments": 10721.42,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100286",
+      "provider_name": "Physicians Regional Medical Center - Pine Ridge",
+      "city": "Naples",
+      "region": "Other Florida",
+      "total_discharges": 40,
+      "avg_covered_charges": 173540.2,
+      "avg_total_payments": 12133.52,
+      "avg_medicare_payments": 10813.52,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100124",
+      "provider_name": "Santa Rosa Medical Center",
+      "city": "Milton",
+      "region": "Other Florida",
+      "total_discharges": 29,
+      "avg_covered_charges": 118301.62,
+      "avg_total_payments": 14139.55,
+      "avg_medicare_payments": 10563.97,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100087",
+      "provider_name": "Sarasota Memorial Hospital",
+      "city": "Sarasota",
+      "region": "Tampa Bay",
+      "total_discharges": 296,
+      "avg_covered_charges": 102146.91,
+      "avg_total_payments": 13882.19,
+      "avg_medicare_payments": 12204.96,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100359",
+      "provider_name": "Sarasota Memorial Hospital - Venice",
+      "city": "North Venice",
+      "region": "Tampa Bay",
+      "total_discharges": 40,
+      "avg_covered_charges": 124366.8,
+      "avg_total_payments": 12647.7,
+      "avg_medicare_payments": 11167.73,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100067",
+      "provider_name": "St Anthonys Hospital",
+      "city": "Saint Petersburg",
+      "region": "Tampa Bay",
+      "total_discharges": 12,
+      "avg_covered_charges": 71895.67,
+      "avg_total_payments": 13632.67,
+      "avg_medicare_payments": 12151.67,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100135",
+      "provider_name": "Tallahassee Memorial Hospital",
+      "city": "Tallahassee",
+      "region": "Other Florida",
+      "total_discharges": 34,
+      "avg_covered_charges": 83422.65,
+      "avg_total_payments": 14942.38,
+      "avg_medicare_payments": 13531.18,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100128",
+      "provider_name": "Tampa General Hospital",
+      "city": "Tampa",
+      "region": "Tampa Bay",
+      "total_discharges": 118,
+      "avg_covered_charges": 136836.5,
+      "avg_total_payments": 18988.84,
+      "avg_medicare_payments": 15593.14,
+      "drg_codes": [
+        469,
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100084",
+      "provider_name": "Uf Health Leesburg Hospital",
+      "city": "Leesburg",
+      "region": "Orlando",
+      "total_discharges": 15,
+      "avg_covered_charges": 77678.87,
+      "avg_total_payments": 12395.27,
+      "avg_medicare_payments": 11115.27,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100113",
+      "provider_name": "Uf Health Shands Hospital",
+      "city": "Gainesville",
+      "region": "Other Florida",
+      "total_discharges": 71,
+      "avg_covered_charges": 93800.32,
+      "avg_total_payments": 19015.46,
+      "avg_medicare_payments": 14115.07,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100290",
+      "provider_name": "Uf Health The Villages Hospital",
+      "city": "The Villages",
+      "region": "Orlando",
+      "total_discharges": 43,
+      "avg_covered_charges": 71830.74,
+      "avg_total_payments": 11946.49,
+      "avg_medicare_payments": 10383.7,
+      "drg_codes": [
+        470
+      ]
+    },
+    {
+      "provider_ccn": "100315",
+      "provider_name": "Viera Hospital",
+      "city": "Melbourne",
+      "region": "Orlando",
+      "total_discharges": 24,
+      "avg_covered_charges": 101280.71,
+      "avg_total_payments": 14043.29,
+      "avg_medicare_payments": 10466.62,
+      "drg_codes": [
+        470
+      ]
+    }
+  ],
+  "analysis": {
+    "n_hospitals": 88,
+    "covered_charges": {
+      "min": 35288.25,
+      "max": 256468.19,
+      "median": 127090.24,
+      "spread_ratio": 7.27
+    },
+    "total_payments": {
+      "min": 11120.32,
+      "max": 20084.03,
+      "median": 14014.24,
+      "spread_ratio": 1.81
+    },
+    "top10_expensive_covered": [
+      {
+        "provider_name": "Hca Florida Pasadena Hospital",
+        "city": "Saint Petersburg",
+        "region": "Tampa Bay",
+        "avg_covered_charges": 256468.19,
+        "avg_total_payments": 14276.34
+      },
+      {
+        "provider_name": "Hca Florida Fawcett Hospital",
+        "city": "Port Charlotte",
+        "region": "Other Florida",
+        "avg_covered_charges": 234684.37,
+        "avg_total_payments": 12120.19
+      },
+      {
+        "provider_name": "Hca Florida St Lucie Hospital",
+        "city": "Port Saint Lucie",
+        "region": "Other Florida",
+        "avg_covered_charges": 226569.98,
+        "avg_total_payments": 14814.97
+      },
+      {
+        "provider_name": "Delray Medical Center",
+        "city": "Delray Beach",
+        "region": "Miami metro",
+        "avg_covered_charges": 225947.64,
+        "avg_total_payments": 11120.32
+      },
+      {
+        "provider_name": "Adventhealth Heart Of Florida",
+        "city": "Davenport",
+        "region": "Orlando",
+        "avg_covered_charges": 225190.35,
+        "avg_total_payments": 12993.12
+      },
+      {
+        "provider_name": "Hca Florida Trinity Hospital",
+        "city": "Trinity",
+        "region": "Tampa Bay",
+        "avg_covered_charges": 222964.23,
+        "avg_total_payments": 15324.36
+      },
+      {
+        "provider_name": "Hca Florida Oak Hill Hospital",
+        "city": "Brooksville",
+        "region": "Other Florida",
+        "avg_covered_charges": 214655.47,
+        "avg_total_payments": 15793.89
+      },
+      {
+        "provider_name": "Hca Florida Gulf Coast Hospital",
+        "city": "Panama City",
+        "region": "Other Florida",
+        "avg_covered_charges": 214177.24,
+        "avg_total_payments": 13985.18
+      },
+      {
+        "provider_name": "Hca Florida Orange Park Hospital",
+        "city": "Orange Park",
+        "region": "Jacksonville",
+        "avg_covered_charges": 211870.12,
+        "avg_total_payments": 15631.75
+      },
+      {
+        "provider_name": "Good Samaritan Medical Center",
+        "city": "West Palm Beach",
+        "region": "Miami metro",
+        "avg_covered_charges": 211472.71,
+        "avg_total_payments": 13107.87
+      }
+    ],
+    "top10_least_expensive_covered": [
+      {
+        "provider_name": "Jackson Hospital",
+        "city": "Marianna",
+        "region": "Other Florida",
+        "avg_covered_charges": 35288.25,
+        "avg_total_payments": 13591.5
+      },
+      {
+        "provider_name": "Flagler Hospital",
+        "city": "Saint Augustine",
+        "region": "Jacksonville",
+        "avg_covered_charges": 50910.56,
+        "avg_total_payments": 14274.32
+      },
+      {
+        "provider_name": "Cleveland Clinic Indian River Hospital",
+        "city": "Vero Beach",
+        "region": "Other Florida",
+        "avg_covered_charges": 62431.25,
+        "avg_total_payments": 13357.0
+      },
+      {
+        "provider_name": "Mayo Clinic",
+        "city": "Jacksonville",
+        "region": "Jacksonville",
+        "avg_covered_charges": 62713.53,
+        "avg_total_payments": 18586.62
+      },
+      {
+        "provider_name": "Adventhealth Fish Memorial",
+        "city": "Orange City",
+        "region": "Other Florida",
+        "avg_covered_charges": 64909.75,
+        "avg_total_payments": 12454.75
+      },
+      {
+        "provider_name": "Cleveland Clinic Hospital",
+        "city": "Weston",
+        "region": "Miami metro",
+        "avg_covered_charges": 65315.17,
+        "avg_total_payments": 14884.67
+      },
+      {
+        "provider_name": "Naples Community Hospital",
+        "city": "Naples",
+        "region": "Other Florida",
+        "avg_covered_charges": 66571.06,
+        "avg_total_payments": 13722.59
+      },
+      {
+        "provider_name": "Jupiter Medical Center",
+        "city": "Jupiter",
+        "region": "Miami metro",
+        "avg_covered_charges": 69132.02,
+        "avg_total_payments": 12347.36
+      },
+      {
+        "provider_name": "Holy Cross Hospital",
+        "city": "Fort Lauderdale",
+        "region": "Miami metro",
+        "avg_covered_charges": 71142.58,
+        "avg_total_payments": 15649.81
+      },
+      {
+        "provider_name": "Uf Health The Villages Hospital",
+        "city": "The Villages",
+        "region": "Orlando",
+        "avg_covered_charges": 71830.74,
+        "avg_total_payments": 11946.49
+      }
+    ],
+    "by_region": [
+      {
+        "region": "Jacksonville",
+        "hospital_count": 8,
+        "median_covered_charges": 115671.96,
+        "median_total_payments": 14069.16
+      },
+      {
+        "region": "Miami metro",
+        "hospital_count": 16,
+        "median_covered_charges": 139912.8,
+        "median_total_payments": 15170.4
+      },
+      {
+        "region": "Orlando",
+        "hospital_count": 18,
+        "median_covered_charges": 107479.63,
+        "median_total_payments": 13858.08
+      },
+      {
+        "region": "Other Florida",
+        "hospital_count": 27,
+        "median_covered_charges": 118301.62,
+        "median_total_payments": 13884.25
+      },
+      {
+        "region": "Tampa Bay",
+        "hospital_count": 19,
+        "median_covered_charges": 136836.5,
+        "median_total_payments": 13882.19
+      }
+    ],
+    "cheapest_city_by_avg_charge": {
+      "city": "Marianna",
+      "avg_covered_charges": 35288.25
+    },
+    "priciest_city_by_avg_charge": {
+      "city": "Saint Petersburg",
+      "avg_covered_charges": 256468.19
+    }
+  }
+}

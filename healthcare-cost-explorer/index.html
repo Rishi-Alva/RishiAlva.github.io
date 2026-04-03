@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Florida joint replacement cost explorer</title>
+		<meta
+			name="description"
+			content="Compare CMS Medicare inpatient covered charges and payments for MS-DRG 469 and 470 across Florida hospitals."
+		/>
+		<link rel="icon" href="../images/healthcare-explorer-logo.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="../images/healthcare-explorer-logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="explorer.css" />
+	</head>
+	<body class="explorer-page">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<img
+					class="site-bridge__mark"
+					src="../images/healthcare-explorer-logo.svg"
+					width="28"
+					height="28"
+					alt=""
+					decoding="async"
+				/>
+				<span class="site-bridge__here">Florida cost explorer</span>
+				<a class="site-bridge__back" href="../index.html#header">All projects</a>
+			</div>
+		</div>
+
+		<div class="wrap wrap--main">
+			<header class="hero">
+				<p class="hero__eyebrow">Healthcare cost transparency</p>
+				<h1 id="page-title">Florida joint replacement hospital charges (MS-DRG 469 &amp; 470)</h1>
+				<p class="hero__lead" id="hero-lead">Loading&hellip;</p>
+			</header>
+
+			<section class="plain-intro" aria-labelledby="plain-intro-heading">
+				<h2 id="plain-intro-heading" class="visually-hidden">What this page shows</h2>
+				<ul class="plain-intro__grid">
+					<li class="plain-intro__item">
+						<span class="plain-intro__icon" aria-hidden="true">1</span>
+						<strong>Same surgery, different numbers</strong>
+						<span>We use Medicare&rsquo;s own published file for one type of stay: major hip or knee replacement.</span>
+					</li>
+					<li class="plain-intro__item">
+						<span class="plain-intro__icon" aria-hidden="true">2</span>
+						<strong>Two money columns</strong>
+						<span
+							><em>List price</em> is what the hospital puts on the bill. <em>Medicare payment</em> is closer to what the program actually paid on average.</span
+						>
+					</li>
+					<li class="plain-intro__item">
+						<span class="plain-intro__icon" aria-hidden="true">3</span>
+						<strong>Explore without jargon</strong>
+						<span>Charts show the big picture; the table lets you sort and filter by region.</span>
+					</li>
+				</ul>
+			</section>
+
+			<p id="load-error" class="load-error" hidden></p>
+
+			<section class="callouts" aria-label="Key statistics">
+				<div class="callout">
+					<p class="callout__value" id="callout-spread">—</p>
+					<p class="callout__label">List price gap from lowest to highest hospital (max ÷ min)</p>
+				</div>
+				<div class="callout">
+					<p class="callout__value" id="callout-median-charge">—</p>
+					<p class="callout__label">Typical hospital in the middle (median list price)</p>
+				</div>
+				<div class="callout">
+					<p class="callout__value" id="callout-cities" style="font-size: 1rem">—</p>
+					<p class="callout__label">One city at the low end vs one at the high end (by hospital average)</p>
+				</div>
+			</section>
+
+			<section class="viz-section" aria-labelledby="viz-section-heading">
+				<h2 id="viz-section-heading" class="viz-section__title">See the data</h2>
+				<p class="viz-section__subtitle">These charts update from the same hospital list as the table below.</p>
+
+				<div class="viz-grid">
+					<div class="viz-split">
+						<div class="chart-panel">
+							<h3 class="chart-panel__h">How many hospitals fall in each price band?</h3>
+							<p class="chart-panel__sub">Average <em>covered charge</em> (list price) per hospital, grouped into ranges.</p>
+							<div class="chart-wrap chart-wrap--hist">
+								<canvas id="chart-histogram" aria-label="Histogram of hospitals by price range"></canvas>
+							</div>
+						</div>
+						<div class="chart-panel chart-panel--donut">
+							<h3 class="chart-panel__h">Hospitals by region</h3>
+							<p class="chart-panel__sub">Share of Florida hospitals in this sample.</p>
+							<div class="chart-wrap chart-wrap--doughnut">
+								<canvas id="chart-regions-share" aria-label="Doughnut chart of hospital counts by region"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="chart-panel chart-panel--full">
+						<h3 class="chart-panel__h">Typical list price by region</h3>
+						<p class="chart-panel__sub">Median average covered charge among hospitals in each region.</p>
+						<div class="chart-wrap chart-wrap--wide">
+							<canvas id="region-chart" aria-label="Bar chart of median charges by region"></canvas>
+						</div>
+					</div>
+					<div class="chart-panel chart-panel--full">
+						<h3 class="chart-panel__h">Top hospitals: list price vs Medicare payment</h3>
+						<p class="chart-panel__sub">
+							Eight hospitals with the highest average list price. Side by side: sticker charge vs what Medicare paid on average (not your personal bill).
+						</p>
+						<div class="chart-wrap chart-wrap--tall">
+							<canvas id="chart-top-compare" aria-label="Grouped bar chart comparing charges and Medicare payments"></canvas>
+						</div>
+					</div>
+					<div class="viz-split viz-split--short">
+						<div class="chart-panel">
+							<h3 class="chart-panel__h">Lowest list prices</h3>
+							<p class="chart-panel__sub">Five hospitals with the smallest average covered charge.</p>
+							<div class="chart-wrap chart-wrap--short">
+								<canvas id="chart-low-5" aria-label="Bar chart of five lowest charges"></canvas>
+							</div>
+						</div>
+						<div class="chart-panel">
+							<h3 class="chart-panel__h">Highest list prices</h3>
+							<p class="chart-panel__sub">Five hospitals with the largest average covered charge.</p>
+							<div class="chart-wrap chart-wrap--short">
+								<canvas id="chart-high-5" aria-label="Bar chart of five highest charges"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="disclaimer" aria-labelledby="disclaimer-heading">
+				<h2 id="disclaimer-heading">Important</h2>
+				<ul id="disclaimer-list"></ul>
+			</section>
+
+			<section class="table-panel" aria-labelledby="table-heading">
+				<h2 id="table-heading">All hospitals in this sample</h2>
+				<p class="table-panel__sub">Click column headers to sort. Filter by region.</p>
+				<div class="controls">
+					<label for="filter-region">Region</label>
+					<select id="filter-region" aria-label="Filter by region"></select>
+				</div>
+				<div class="table-scroll">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col" data-sort-key="provider_name" data-sort="none">Hospital</th>
+								<th scope="col" data-sort-key="city" data-sort="none">City</th>
+								<th scope="col" data-sort-key="region" data-sort="none">Region</th>
+								<th scope="col" data-sort-key="total_discharges" data-sort="none" class="num">Discharges</th>
+								<th scope="col" data-sort-key="avg_covered_charges" data-sort="none" class="num">Avg covered charge</th>
+								<th scope="col" data-sort-key="avg_total_payments" data-sort="none" class="num">Avg total payment</th>
+								<th scope="col" data-sort-key="avg_medicare_payments" data-sort="none" class="num">Avg Medicare payment</th>
+							</tr>
+						</thead>
+						<tbody id="hospital-tbody"></tbody>
+					</table>
+				</div>
+			</section>
+
+			<section class="methodology" aria-labelledby="method-heading">
+				<h2 id="method-heading">Methodology (how this extract was built)</h2>
+				<ol id="methodology-list"></ol>
+				<p class="footer-note">
+					Data:
+					<a href="https://data.cms.gov/provider-summary/hospitals/inpatient-provider-summary-and-charges"
+						>Medicare Inpatient Hospitals by Provider and Service</a
+					>
+					(CMS). Rebuild JSON with
+					<code>python3 scripts/build_healthcare_cost_explorer.py</code>
+					from the site repository.
+				</p>
+			</section>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+		<script src="explorer.js"></script>
+	</body>
+</html>
