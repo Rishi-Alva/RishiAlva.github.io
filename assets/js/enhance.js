@@ -7,7 +7,7 @@
 		window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 	function revealAll() {
-		document.querySelectorAll(".reveal, #main .recruiter-section .reveal-item").forEach(function (el) {
+		document.querySelectorAll(".reveal, #main .recruiter-section .reveal-item, #main .career-section .reveal-item").forEach(function (el) {
 			el.classList.add("visible");
 		});
 		document.querySelectorAll(".skill-meter__fill").forEach(function (el) {
@@ -22,7 +22,7 @@
 
 	document.addEventListener("DOMContentLoaded", function () {
 		var revealNodes = document.querySelectorAll(
-			"#main .post, #main .posts article, #main .recruiter-section .reveal-item"
+			"#main .post, #main .posts article, #main .recruiter-section .reveal-item, #main .career-section .reveal-item"
 		);
 		revealNodes.forEach(function (el) {
 			if (el.classList.contains("reveal-item")) {

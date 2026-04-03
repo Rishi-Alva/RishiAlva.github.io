@@ -1,4 +1,4 @@
-/* Rishi Alva — site enhancements (layered on HTML5 UP Massively) */
+/* Rishi Alva: site enhancements (layered on HTML5 UP Massively) */
 
 :root {
 	--ea-accent: #22d3ee;
@@ -30,7 +30,8 @@ html {
 		width: var(--skill) !important;
 		transition: none !important;
 	}
-	#main .recruiter-section .reveal-item {
+	#main .recruiter-section .reveal-item,
+	#main .career-section .reveal-item {
 		opacity: 1 !important;
 		transform: none !important;
 		transition: none !important;
@@ -77,7 +78,7 @@ body {
 	z-index: 1;
 }
 
-/* Hero typography — title, role, blurb, visible links */
+/* Hero typography: title, role, blurb, visible links */
 #intro .intro-eyebrow {
 	font-family: "DM Sans", "Source Sans Pro", sans-serif;
 	font-size: 0.75rem;
@@ -298,7 +299,256 @@ body {
 	color: var(--ea-accent) !important;
 }
 
-/* —— Recruiter / profile section —— */
+/* Education & career timeline */
+#main .career-section {
+	margin-top: 2.5rem;
+	padding: 2.5rem 2rem 3rem;
+	background: #ffffff;
+	border-radius: var(--ea-radius-lg);
+	border: 1px solid rgba(220, 220, 220, 0.75);
+	box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
+}
+
+.career-section__lede {
+	max-width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.05rem;
+	line-height: 1.65;
+	color: #5a6369;
+}
+
+.career-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+	margin: 2rem 0 2.5rem;
+}
+
+@media screen and (max-width: 900px) {
+	.career-columns {
+		grid-template-columns: 1fr;
+	}
+}
+
+.career-panel {
+	padding: 1.5rem 1.35rem;
+	border-radius: var(--ea-radius);
+	border: 1px solid #e2e8f0;
+	background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+	transition: box-shadow 0.35s var(--ea-ease), border-color 0.25s ease;
+}
+
+.career-panel:hover {
+	box-shadow: var(--ea-shadow);
+	border-color: rgba(34, 211, 238, 0.35);
+}
+
+.career-panel__title {
+	font-size: 1rem;
+	margin: 0 0 1rem 0;
+	color: #0f172a;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.career-panel__title i {
+	color: #0891b2;
+}
+
+.career-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.career-list--edu li,
+.career-list--certs li {
+	margin-bottom: 1.35rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid #e2e8f0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.career-list--edu li:last-child,
+.career-list--certs li:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.career-list__org {
+	font-weight: 700;
+	color: #0f172a;
+	font-size: 1.02rem;
+}
+
+.career-list__degree {
+	font-weight: 600;
+	color: #334155;
+	font-size: 0.95rem;
+}
+
+.career-list__meta {
+	font-size: 0.82rem;
+	color: #64748b;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.career-list__detail {
+	font-size: 0.9rem;
+	color: #64748b;
+	line-height: 1.5;
+	margin-top: 0.35rem;
+}
+
+.career-list__cert {
+	font-weight: 700;
+	color: #0e7490;
+	display: block;
+	font-size: 0.88rem;
+}
+
+.career-panel__footnote {
+	margin: 1rem 0 0;
+	font-size: 0.88rem;
+}
+
+.career-panel__footnote a {
+	border-bottom: 1px solid rgba(24, 191, 239, 0.5);
+}
+
+.career-timeline__heading {
+	text-align: center;
+	font-size: 1.15rem;
+	margin: 0 0 0.5rem;
+	color: #0f172a;
+}
+
+.career-timeline__intro {
+	text-align: center;
+	max-width: 36rem;
+	margin: 0 auto 1.75rem;
+	font-size: 0.95rem;
+	color: #64748b;
+	line-height: 1.55;
+}
+
+.career-timeline {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	max-width: 44rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.career-timeline::before {
+	content: "";
+	position: absolute;
+	left: 0.65rem;
+	top: 0.35rem;
+	bottom: 0.35rem;
+	width: 3px;
+	background: linear-gradient(180deg, #22d3ee, #0891b2);
+	border-radius: 999px;
+}
+
+@media screen and (max-width: 736px) {
+	.career-timeline::before {
+		left: 0.4rem;
+	}
+}
+
+.career-timeline__item {
+	position: relative;
+	padding-left: 2.5rem;
+	margin-bottom: 1.75rem;
+}
+
+.career-timeline__marker {
+	position: absolute;
+	left: 0;
+	top: 0.35rem;
+	width: 1.35rem;
+	height: 1.35rem;
+	border-radius: 50%;
+	background: #fff;
+	border: 3px solid #22d3ee;
+	box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.2);
+}
+
+.career-timeline__dates {
+	display: block;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #0891b2;
+	margin-bottom: 0.35rem;
+}
+
+.career-timeline__title {
+	font-size: 1.05rem;
+	margin: 0 0 0.5rem;
+	color: #0f172a;
+	line-height: 1.35;
+}
+
+.career-timeline__at {
+	font-weight: 600;
+	color: #475569;
+	font-size: 0.92rem;
+}
+
+.career-bullets {
+	margin: 0;
+	padding-left: 1.1rem;
+	font-size: 0.92rem;
+	line-height: 1.6;
+	color: #475569;
+}
+
+.career-bullets li {
+	margin-bottom: 0.35rem;
+}
+
+.career-linkedin-note {
+	text-align: center;
+	max-width: 38rem;
+	margin: 2rem auto 0;
+	padding: 1rem 1.25rem;
+	font-size: 0.92rem;
+	line-height: 1.6;
+	color: #64748b;
+	background: #f8fafc;
+	border-radius: var(--ea-radius);
+	border: 1px dashed #cbd5e1;
+}
+
+.career-linkedin-note a {
+	font-weight: 600;
+}
+
+#main .career-section .reveal-item {
+	opacity: 0;
+	transform: translateY(18px);
+	transition:
+		opacity 0.55s var(--ea-ease),
+		transform 0.55s var(--ea-ease);
+}
+
+#main .career-section .reveal-item.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Recruiter / profile section */
 #main .recruiter-section {
 	margin-top: 3rem;
 	padding: 2.5rem 2rem 3rem;
