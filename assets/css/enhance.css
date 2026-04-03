@@ -30,8 +30,7 @@ html {
 		width: var(--skill) !important;
 		transition: none !important;
 	}
-	#main .recruiter-section .reveal-item,
-	#main .career-section .reveal-item {
+	#main .recruiter-section .reveal-item {
 		opacity: 1 !important;
 		transform: none !important;
 		transition: none !important;
@@ -300,6 +299,16 @@ body {
 }
 
 /* Education & career timeline */
+#main > .career-section {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: visible;
+	clear: both;
+	flex: none;
+}
+
 #main .career-section {
 	margin-top: 2.5rem;
 	padding: 2.5rem 2rem 3rem;
@@ -307,6 +316,16 @@ body {
 	border-radius: var(--ea-radius-lg);
 	border: 1px solid rgba(220, 220, 220, 0.75);
 	box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
+}
+
+@media screen and (max-width: 736px) {
+	#main > .career-section {
+		padding-bottom: 2.5rem !important;
+	}
+}
+
+.career-section__head {
+	text-align: center;
 }
 
 .career-section__lede {
@@ -533,19 +552,6 @@ body {
 
 .career-linkedin-note a {
 	font-weight: 600;
-}
-
-#main .career-section .reveal-item {
-	opacity: 0;
-	transform: translateY(18px);
-	transition:
-		opacity 0.55s var(--ea-ease),
-		transform 0.55s var(--ea-ease);
-}
-
-#main .career-section .reveal-item.visible {
-	opacity: 1;
-	transform: translateY(0);
 }
 
 /* Recruiter / profile section */
