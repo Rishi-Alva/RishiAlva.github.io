@@ -753,6 +753,11 @@ body {
 	color: #5a6369;
 }
 
+.recruiter-card--outcome .recruiter-card__text {
+	line-height: 1.42;
+	letter-spacing: normal;
+}
+
 .recruiter-pills {
 	display: flex;
 	flex-wrap: wrap;
