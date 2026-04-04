@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Life expectancy estimator | Rishi Alva</title>
+		<meta name="description" content="Illustrative life expectancy adjustment from age, sex, and a few lifestyle sliders." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--health">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Life expectancy</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Illustrative model</p>
+				<h1>Life expectancy estimator</h1>
+				<p class="hero__lead">
+					Starts from a rough U.S. population residual life table guess, then applies <strong>toy</strong> year adjustments
+					for smoking, activity, diet pattern, and BMI band. Not predictive for individuals.
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<h2>Inputs</h2>
+				<div class="field-row">
+					<div class="field">
+						<label for="le-age">Your age now</label>
+						<input type="number" id="le-age" min="18" max="100" step="1" value="35" />
+					</div>
+					<div class="field">
+						<label for="le-sex">Sex (for baseline only)</label>
+						<select id="le-sex">
+							<option value="m">Male</option>
+							<option value="f" selected>Female</option>
+						</select>
+					</div>
+				</div>
+				<div class="field">
+					<label for="le-smoke">Smoking</label>
+					<select id="le-smoke">
+						<option value="0">Never / former long quit</option>
+						<option value="-6">Current some days</option>
+						<option value="-10">Current daily</option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="le-ex">Physical activity</label>
+					<select id="le-ex">
+						<option value="0">Meets typical aerobic guidelines</option>
+						<option value="-1.5">Below guidelines</option>
+						<option value="-3">Mostly sedentary</option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="le-diet">Diet pattern (self-rated)</label>
+					<select id="le-diet">
+						<option value="0">Balanced, plenty of plants</option>
+						<option value="-1">Average mixed diet</option>
+						<option value="-2.5">Mostly ultra-processed / low produce</option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="le-bmi">BMI band</label>
+					<select id="le-bmi">
+						<option value="0">18.5–24.9</option>
+						<option value="-0.5">25–29.9</option>
+						<option value="-1.5">30–34.9</option>
+						<option value="-3">&lt;18.5 or ≥35 (simplified)</option>
+					</select>
+				</div>
+				<button type="button" class="btn" id="go">Estimate</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">
+				Real expectancy depends on genetics, environment, healthcare access, and random chance. This toy model is for
+				quant literacy conversations only.
+			</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="life-expectancy.js"></script>
+	</body>
+</html>

@@ -263,6 +263,29 @@ body {
 	transform: scaleX(1);
 }
 
+#navPanel nav ul.links a {
+	position: relative;
+	transition: color 0.25s ease;
+}
+
+#navPanel nav ul.links a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, var(--ea-accent), #67e8f9);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.35s var(--ea-ease);
+}
+
+#navPanel nav ul.links a:hover::after,
+#navPanel nav ul.links li.active a::after {
+	transform: scaleX(1);
+}
+
 #nav ul.icons a {
 	transition:
 		color 0.25s ease,
@@ -272,6 +295,89 @@ body {
 #nav ul.icons a:hover {
 	transform: translateY(-3px);
 	color: var(--ea-accent) !important;
+}
+
+#navPanel nav ul.icons a {
+	transition:
+		color 0.25s ease,
+		transform 0.3s var(--ea-ease);
+}
+
+#navPanel nav ul.icons a:hover {
+	transform: translateY(-3px);
+	color: var(--ea-accent) !important;
+}
+
+/* Icon row: flex-center so calculator + FA icons share one vertical axis in the 4rem bar */
+#nav ul.icons {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	flex-wrap: nowrap;
+}
+
+#nav ul.icons > li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#navPanel nav ul.icons {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+#navPanel nav ul.icons > li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Calculators mark — same box as ul.icons li .icon:before (2.25rem circle, inline-block geometry) */
+#nav ul.icons li a.nav-calc-mark,
+#navPanel nav ul.icons li a.nav-calc-mark {
+	position: relative;
+	display: inline-block;
+	width: 2.25rem;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 100%;
+	border-bottom: 0;
+	box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+	overflow: hidden;
+}
+
+#nav ul.icons li a.nav-calc-mark:hover,
+#navPanel nav ul.icons li a.nav-calc-mark:hover {
+	box-shadow: inset 0 0 0 2px var(--ea-accent);
+}
+
+#navPanel nav ul.icons li a.nav-calc-mark {
+	box-shadow: inset 0 0 0 2px #dddddd;
+}
+
+#nav ul.icons li a.nav-calc-mark::before,
+#navPanel nav ul.icons li a.nav-calc-mark::before {
+	content: none !important;
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+	line-height: 0 !important;
+}
+
+#nav ul.icons li a.nav-calc-mark img,
+#navPanel nav ul.icons li a.nav-calc-mark img {
+	width: 1.2rem;
+	height: 1.2rem;
+	max-width: 1.2rem;
+	max-height: 1.2rem;
+	display: inline-block;
+	vertical-align: middle;
+	object-fit: contain;
+	margin: 0;
 }
 
 /* Project cards */
@@ -287,6 +393,91 @@ body {
 #main .posts article:hover {
 	transform: translateY(-6px);
 	box-shadow: var(--ea-shadow-hover);
+}
+
+/* Top two featured projects: smaller, calmer first impression */
+#main > .post.featured {
+	max-width: 48rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3.25rem 2rem 2.75rem !important;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 1280px) {
+	#main > .post.featured {
+		padding: 2.75rem 1.75rem 2.35rem !important;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#main > .post.featured {
+		padding: 2.25rem 1.25rem 2rem !important;
+	}
+}
+
+#main > .post.featured:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 14px 36px rgba(15, 23, 42, 0.1);
+}
+
+#main > .post.featured header.major h2 {
+	font-size: clamp(1.5rem, 3.2vw, 2.1rem) !important;
+	line-height: 1.22 !important;
+	margin: 0 0 0.85rem 0 !important;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
+
+#main > .post.featured header.major p {
+	max-width: 34rem;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.92rem !important;
+	line-height: 1.58 !important;
+	color: #6b7280 !important;
+	font-weight: 400;
+}
+
+#main > .post.featured .actions.special {
+	margin-top: 1.25rem;
+}
+
+#main > .post.featured .actions.special .button {
+	font-size: 0.82rem;
+	padding: 0 1.2rem;
+	min-height: 2.5rem;
+	line-height: 2.5rem;
+	height: auto;
+}
+
+#main > .post.featured + .post.featured {
+	padding-top: 2rem !important;
+}
+
+#main > .post.featured:hover .image.main img {
+	transform: scale(1.03);
+}
+
+/* Featured hero media: square-ish tile (each keeps its own backdrop: gradient vs photo) */
+#main .post.featured .image.main {
+	width: 100%;
+	max-width: min(100%, 30rem);
+	margin: 1.5rem auto 1.75rem;
+	aspect-ratio: 1 / 1;
+	max-height: none;
+	border-radius: var(--ea-radius-lg);
+	overflow: hidden;
+	box-shadow:
+		0 20px 44px rgba(15, 23, 42, 0.11),
+		0 0 0 1px rgba(15, 23, 42, 0.06);
+	transition: box-shadow 0.4s var(--ea-ease);
+}
+
+#main > .post.featured:hover .image.main {
+	box-shadow:
+		0 32px 64px rgba(15, 23, 42, 0.16),
+		0 0 0 1px rgba(34, 211, 238, 0.22);
 }
 
 #main .image {
@@ -342,12 +533,6 @@ body {
 	filter: saturate(0.96) brightness(0.95) contrast(1.07);
 }
 
-/* Featured Power BI rows: consistent wide crop */
-#main .post.featured .image.main {
-	aspect-ratio: 2 / 1;
-	max-height: min(52vh, 28rem);
-}
-
 #main .post.featured .image.main img {
 	width: 100%;
 	height: 100%;
@@ -356,33 +541,33 @@ body {
 	display: block;
 }
 
-/* Healthcare Cost Explorer: formal app-style mark on clinical data backdrop */
+/* Healthcare Cost Explorer: same clinical gradient, square frame */
 #main .post.featured .image.main.image--explorer-feature {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 2.25rem 1.5rem;
+	padding: clamp(1.25rem, 4vw, 2rem);
 	box-sizing: border-box;
 	background:
-		radial-gradient(ellipse 75% 65% at 50% 0%, rgba(34, 211, 238, 0.14) 0%, transparent 52%),
+		radial-gradient(ellipse 75% 65% at 50% 0%, rgba(34, 211, 238, 0.1) 0%, transparent 52%),
 		linear-gradient(168deg, #050b12 0%, #0e2438 45%, #081420 100%);
 }
 
 #main .post.featured .image.main.image--explorer-feature img {
 	width: auto;
 	height: auto;
-	max-width: min(52%, 240px);
-	max-height: clamp(7.5rem, 24vw, 15rem);
+	max-width: min(62%, 220px);
+	max-height: min(55%, 200px);
 	object-fit: contain;
 	object-position: center;
 	flex-shrink: 0;
-	filter: drop-shadow(0 18px 50px rgba(24, 191, 239, 0.28));
+	filter: drop-shadow(0 12px 32px rgba(24, 191, 239, 0.22));
 }
 
 @media screen and (min-width: 981px) {
 	#main .post.featured .image.main.image--explorer-feature img {
-		max-width: min(46%, 280px);
-		max-height: clamp(9rem, 18vw, 16rem);
+		max-width: min(58%, 240px);
+		max-height: min(52%, 220px);
 	}
 }
 
@@ -1016,6 +1201,37 @@ body {
 	font-size: 1rem;
 	margin: 0 0 1rem;
 	color: #334155;
+}
+
+/* Tooling grid + header after Quick answers */
+#main .recruiter-section .posts-showcase {
+	margin-top: 2.25rem;
+	padding-top: 2rem;
+	border-top: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+#main .recruiter-section .posts-showcase__head {
+	text-align: center;
+	margin-bottom: 0.25rem;
+}
+
+#main .recruiter-section .posts-showcase__head h2 {
+	letter-spacing: -0.02em;
+	font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+	margin-bottom: 0.65rem;
+	color: #0f172a;
+}
+
+.posts-showcase__lede {
+	max-width: 36rem;
+	margin: 0 auto 1.75rem;
+	font-size: 1rem;
+	line-height: 1.65;
+	color: #5a6369;
+}
+
+#main .recruiter-section .posts-showcase .posts {
+	margin-top: 0;
 }
 
 .recruiter-details {

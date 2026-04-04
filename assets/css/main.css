@@ -3823,7 +3823,7 @@ input, select, textarea {
 
 			}
 
-		#main > .posts {
+		#main .posts {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3841,7 +3841,7 @@ input, select, textarea {
 			padding: 0;
 		}
 
-			#main > .posts > * {
+			#main .posts > * {
 				-moz-flex-shrink: 1;
 				-webkit-flex-shrink: 1;
 				-ms-flex-shrink: 1;
@@ -3852,16 +3852,16 @@ input, select, textarea {
 				flex-grow: 0;
 			}
 
-			#main > .posts > * {
+			#main .posts > * {
 				width: 50%;
 			}
 
-			#main > .posts > * {
+			#main .posts > * {
 				padding: 4rem;
 				width: 50%;
 			}
 
-			#main > .posts > article {
+			#main .posts > article {
 				border-color: #eeeeee;
 				border-left-width: 2px;
 				border-style: solid;
@@ -3869,25 +3869,25 @@ input, select, textarea {
 				text-align: center;
 			}
 
-				#main > .posts > article > :last-child {
+				#main .posts > article > :last-child {
 					margin-bottom: 0;
 				}
 
-				#main > .posts > article:nth-child(2n - 1) {
+				#main .posts > article:nth-child(2n - 1) {
 					border-left-width: 0;
 				}
 
-				#main > .posts > article:nth-child(-n + 2) {
+				#main .posts > article:nth-child(-n + 2) {
 					border-top-width: 0;
 				}
 
 			@media screen and (max-width: 980px) {
 
-				#main > .posts > * {
+				#main .posts > * {
 					width: 50%;
 				}
 
-				#main > .posts > * {
+				#main .posts > * {
 					padding: 2.5rem;
 					width: 50%;
 				}
@@ -3896,32 +3896,32 @@ input, select, textarea {
 
 			@media screen and (max-width: 736px) {
 
-				#main > .posts > * {
+				#main .posts > * {
 					width: 100%;
 				}
 
-				#main > .posts > * {
+				#main .posts > * {
 					padding: 2rem;
 					width: 100%;
 				}
 
-				#main > .posts > article:nth-child(2n - 1) {
+				#main .posts > article:nth-child(2n - 1) {
 					border-left-width: 2px;
 				}
 
-				#main > .posts > article:nth-child(-n + 2) {
+				#main .posts > article:nth-child(-n + 2) {
 					border-top-width: 2px;
 				}
 
-				#main > .posts > article:nth-child(n) {
+				#main .posts > article:nth-child(n) {
 					border-left-width: 0;
 				}
 
-				#main > .posts > article:nth-child(-n + 1) {
+				#main .posts > article:nth-child(-n + 1) {
 					border-top-width: 0;
 				}
 
-				#main > .posts > article .image {
+				#main .posts > article .image {
 					max-width: 25rem;
 					margin-left: auto;
 					margin-right: auto;

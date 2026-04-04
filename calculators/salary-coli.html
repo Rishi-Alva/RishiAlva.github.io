@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Salary cost-of-living comparator | Rishi Alva</title>
+		<meta name="description" content="Equivalent salary between two cities using cost-of-living indices you supply." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--finance">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">COLI salary</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Relocation</p>
+				<h1>Salary cost-of-living comparator</h1>
+				<p class="hero__lead">
+					Enter your salary in <strong>city A</strong> and COL indices for A and B on the <strong>same scale</strong>
+					(higher = more expensive). Equivalent salary in B = salary × (index<sub>B</sub> / index<sub>A</sub>).
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<div class="field">
+					<label for="sal">Salary in city A ($)</label>
+					<input type="number" id="sal" inputmode="decimal" min="0" step="any" placeholder="95000" />
+				</div>
+				<div class="field-row">
+					<div class="field">
+						<label for="ia">COL index city A</label>
+						<input type="number" id="ia" inputmode="decimal" min="1" step="any" placeholder="100" value="100" />
+					</div>
+					<div class="field">
+						<label for="ib">COL index city B</label>
+						<input type="number" id="ib" inputmode="decimal" min="1" step="any" placeholder="148" />
+					</div>
+				</div>
+				<button type="button" class="btn" id="go">Compare</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">
+				Indices vary by source (Numbeo, C2ER, OECD, etc.). Use paired estimates from one methodology; mix sources at your
+				own risk.
+			</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="salary-coli.js"></script>
+	</body>
+</html>

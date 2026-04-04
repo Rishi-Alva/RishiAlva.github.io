@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Correlation interpreter | Rishi Alva</title>
+		<meta name="description" content="Describe Pearson correlation strength from r with rule-of-thumb bands." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--stats">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Correlation</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Effect wording</p>
+				<h1>Correlation strength interpreter</h1>
+				<p class="hero__lead">
+					Enter a Pearson <em>r</em> between −1 and 1. We label |<em>r</em>| with informal bands (not universal across
+					fields).
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<div class="field">
+					<label for="r">Pearson r</label>
+					<input type="number" id="r" inputmode="decimal" min="-1" max="1" step="0.01" placeholder="0.37" />
+				</div>
+				<button type="button" class="btn" id="go">Interpret</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">
+				Correlation is not causation. <em>r</em><sup>2</sup> is variance explained only in a narrow linear-model sense.
+			</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="correlation.js"></script>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Macro breakdown | Rishi Alva</title>
+		<meta name="description" content="Protein, carb, and fat gram targets from daily calories and protein per kg body weight." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--health">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Macros</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Macros</p>
+				<h1>Macro breakdown</h1>
+				<p class="hero__lead">
+					Sets protein from body weight (g per kg), then splits remaining calories between carbs and fats by your chosen
+					ratio (default 50/50 of leftover kcal).
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<h2>Inputs</h2>
+				<div class="field-row">
+					<div class="field">
+						<label for="tdee">Daily calorie target (kcal)</label>
+						<input type="number" id="tdee" inputmode="numeric" min="800" step="50" placeholder="2200" />
+					</div>
+					<div class="field">
+						<label for="w-kg">Body weight (kg)</label>
+						<input type="number" id="w-kg" inputmode="decimal" min="1" step="0.1" placeholder="75" />
+					</div>
+				</div>
+				<div class="field-row">
+					<div class="field">
+						<label for="prot-gkg">Protein (g per kg body weight)</label>
+						<input type="number" id="prot-gkg" inputmode="decimal" min="0.5" max="3.5" step="0.1" value="1.6" />
+					</div>
+					<div class="field">
+						<label for="carb-pct">Share of <em>remaining</em> kcal to carbs (0–100%)</label>
+						<input type="number" id="carb-pct" inputmode="numeric" min="0" max="100" step="5" value="50" />
+					</div>
+				</div>
+				<p style="font-size: 0.85rem; color: var(--calc-muted); margin: 0 0 1rem">
+					The rest of leftover calories go to fat. Protein = 4 kcal/g, carbs = 4 kcal/g, fat = 9 kcal/g.
+				</p>
+				<button type="button" class="btn" id="go">Calculate</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">For illustration only. Medical conditions and sport-specific needs require individualized plans.</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="macros.js"></script>
+	</body>
+</html>

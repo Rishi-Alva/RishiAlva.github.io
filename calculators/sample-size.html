@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sample size calculator | Rishi Alva</title>
+		<meta name="description" content="Per-group sample size to compare two independent proportions (normal approximation)." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--stats">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Sample size</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Power</p>
+				<h1>Sample size (two proportions)</h1>
+				<p class="hero__lead">
+					Equal <em>n</em> per arm to detect a difference between two independent proportions with two-sided α and target
+					power (normal approximation, unpooled variance in denominator).
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<h2>Assumed rates</h2>
+				<div class="field-row">
+					<div class="field">
+						<label for="p1">Control conversion rate (0–1)</label>
+						<input type="number" id="p1" inputmode="decimal" min="0.001" max="0.999" step="0.01" value="0.12" />
+					</div>
+					<div class="field">
+						<label for="p2">Variant conversion rate (0–1)</label>
+						<input type="number" id="p2" inputmode="decimal" min="0.001" max="0.999" step="0.01" value="0.14" />
+					</div>
+				</div>
+				<div class="field-row">
+					<div class="field">
+						<label for="alpha">Two-sided α</label>
+						<select id="alpha">
+							<option value="0.1">0.10</option>
+							<option value="0.05" selected>0.05</option>
+							<option value="0.01">0.01</option>
+						</select>
+					</div>
+					<div class="field">
+						<label for="power">Power (1 − β)</label>
+						<select id="power">
+							<option value="0.8" selected>80%</option>
+							<option value="0.9">90%</option>
+						</select>
+					</div>
+				</div>
+				<button type="button" class="btn" id="go">Calculate</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">
+				Ignores clustering, multiple testing, and sequential peeking. For serious trials use a statistician and possibly
+				simulation-based sizing.
+			</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="sample-size.js"></script>
+	</body>
+</html>

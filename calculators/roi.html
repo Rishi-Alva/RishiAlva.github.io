@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ROI calculator | Rishi Alva</title>
+		<meta name="description" content="Return on investment from net gain and cost basis." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--biz">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">ROI</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Return</p>
+				<h1>ROI calculator</h1>
+				<p class="hero__lead">ROI = (gain − cost) / cost, expressed as a percent. Gain can be net benefit after the investment.</p>
+			</header>
+
+			<div class="calc-panel">
+				<div class="field-row">
+					<div class="field">
+						<label for="cost">Investment / cost ($)</label>
+						<input type="number" id="cost" inputmode="decimal" min="0" step="any" placeholder="50000" />
+					</div>
+					<div class="field">
+						<label for="gain">Value returned / net gain ($)</label>
+						<input type="number" id="gain" inputmode="decimal" step="any" placeholder="72000" />
+					</div>
+				</div>
+				<p style="font-size: 0.85rem; color: var(--calc-muted)">
+					Alternatively enter <strong>final value</strong> below instead of gain; we compute gain = final − cost.
+				</p>
+				<div class="field">
+					<label for="final">Final value ($), optional</label>
+					<input type="number" id="final" inputmode="decimal" step="any" placeholder="leave blank if using gain" />
+				</div>
+				<button type="button" class="btn" id="go">Calculate</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">Ignores timing of cash flows; use IRR or NPV when timing matters.</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="roi.js"></script>
+	</body>
+</html>

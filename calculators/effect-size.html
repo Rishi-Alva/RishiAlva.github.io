@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Cohen's d calculator | Rishi Alva</title>
+		<meta name="description" content="Cohen's d from two-sample means and standard deviations (pooled SD)." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--stats">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Cohen&rsquo;s d</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Standardized difference</p>
+				<h1>Effect size (Cohen&rsquo;s d)</h1>
+				<p class="hero__lead">
+					Pooled-SD version for two independent groups: <em>d</em> = (M<sub>1</sub> − M<sub>2</sub>) / <em>s</em><sub>pooled</sub>.
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<h2>Group 1</h2>
+				<div class="field-row">
+					<div class="field">
+						<label for="n1">n</label>
+						<input type="number" id="n1" min="2" step="1" placeholder="50" />
+					</div>
+					<div class="field">
+						<label for="m1">Mean</label>
+						<input type="number" id="m1" step="any" placeholder="102" />
+					</div>
+					<div class="field">
+						<label for="s1">SD</label>
+						<input type="number" id="s1" min="0" step="any" placeholder="15" />
+					</div>
+				</div>
+				<h2>Group 2</h2>
+				<div class="field-row">
+					<div class="field">
+						<label for="n2">n</label>
+						<input type="number" id="n2" min="2" step="1" placeholder="48" />
+					</div>
+					<div class="field">
+						<label for="m2">Mean</label>
+						<input type="number" id="m2" step="any" placeholder="96" />
+					</div>
+					<div class="field">
+						<label for="s2">SD</label>
+						<input type="number" id="s2" min="0" step="any" placeholder="14" />
+					</div>
+				</div>
+				<button type="button" class="btn" id="go">Calculate d</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">Cohen&rsquo;s rules of thumb (≈0.2 / 0.5 / 0.8) are arbitrary outside your discipline&rsquo;s norms.</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="effect-size.js"></script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Hydration calculator | Rishi Alva</title>
+		<meta name="description" content="Rough daily fluid target from body weight and activity." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--health">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Hydration</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Fluids</p>
+				<h1>Hydration needs</h1>
+				<p class="hero__lead">
+					Rule-of-thumb: about 30–35 ml per kg body weight, plus a bump for higher activity or heat. Output is total
+					fluids from drinks + watery foods, not a prescription.
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<h2>Inputs</h2>
+				<div class="radio-row" role="group" aria-label="Units">
+					<label><input type="radio" name="wu" value="kg" checked /> Weight in kg</label>
+					<label><input type="radio" name="wu" value="lb" /> Weight in lb</label>
+				</div>
+				<div class="field-row">
+					<div class="field">
+						<label for="w">Weight</label>
+						<input type="number" id="w" inputmode="decimal" min="1" step="0.1" placeholder="75" />
+					</div>
+					<div class="field">
+						<label for="act">Activity / sweat level</label>
+						<select id="act">
+							<option value="0">Low (mostly seated)</option>
+							<option value="400" selected>Moderate (regular exercise)</option>
+							<option value="800">High (heavy training or hot climate)</option>
+						</select>
+					</div>
+				</div>
+				<button type="button" class="btn" id="go">Calculate</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">
+				Heart, kidney, or electrolyte disorders often need fluid limits. Follow your care team if that applies to you.
+			</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="hydration.js"></script>
+	</body>
+</html>

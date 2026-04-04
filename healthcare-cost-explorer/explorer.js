@@ -1,5 +1,5 @@
 /**
- * Healthcare Cost Transparency Explorer — data, sortable table, multiple Chart.js views.
+ * Healthcare Cost Transparency Explorer: data, sortable table, multiple Chart.js views.
  */
 (function () {
 	const DATA_URL = "data/explorer.json";
@@ -118,7 +118,7 @@
 		const cheap = analysis.cheapest_city_by_avg_charge;
 		const pricey = analysis.priciest_city_by_avg_charge;
 
-		$("#callout-spread").textContent = cc.spread_ratio != null ? `${cc.spread_ratio}×` : "—";
+		$("#callout-spread").textContent = cc.spread_ratio != null ? `${cc.spread_ratio}×` : "-";
 		$("#callout-median-charge").textContent = fmtMoney(cc.median);
 		$("#callout-cities").textContent = `${cheap.city} (${fmtMoney(cheap.avg_covered_charges)}) vs ${pricey.city} (${fmtMoney(pricey.avg_covered_charges)})`;
 	}

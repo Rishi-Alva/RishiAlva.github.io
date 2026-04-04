@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Vaccine schedule tracker | Rishi Alva</title>
+		<meta name="description" content="Reference adult vaccine schedule and simple last-dose tracker (local storage)." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--health">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Vaccines</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Immunization reference</p>
+				<h1>Vaccine schedule tracker</h1>
+				<p class="hero__lead">
+					Summary of common <strong>adult</strong> U.S. recommendations (simplified). Always confirm with CDC/ACIP and your
+					clinician. Optional fields save only in <strong>this browser</strong> (localStorage).
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<h2>Your age</h2>
+				<div class="field-row">
+					<div class="field">
+						<label for="dob">Date of birth (optional)</label>
+						<input type="date" id="dob" />
+					</div>
+					<div class="field">
+						<label for="age-out">Computed age (years)</label>
+						<input type="text" id="age-out" readonly placeholder="Enter DOB or type age below" />
+					</div>
+				</div>
+				<div class="field">
+					<label for="age-manual">Or enter age manually</label>
+					<input type="number" id="age-manual" min="0" max="120" step="1" placeholder="e.g. 34" />
+				</div>
+				<button type="button" class="btn" id="age-go">Update age</button>
+			</div>
+
+			<div class="calc-panel">
+				<h2>Reference: routine adults (simplified)</h2>
+				<div class="calc-table-wrap">
+					<table class="calc-table">
+						<thead>
+							<tr>
+								<th>Vaccine</th>
+								<th>Typical routine</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Influenza</td>
+								<td>Every year for everyone 6m+ (egg allergy exceptions per guidance)</td>
+							</tr>
+							<tr>
+								<td>Tdap / Td</td>
+								<td>Tdap once, then Td or Tdap booster every 10 years</td>
+							</tr>
+							<tr>
+								<td>COVID-19</td>
+								<td>Per current CDC product-specific schedule</td>
+							</tr>
+							<tr>
+								<td>HPV</td>
+								<td>Through age 26 if not completed; 27–45 shared decision</td>
+							</tr>
+							<tr>
+								<td>MMR</td>
+								<td>1–2 doses if born ≥1957 and no evidence of immunity</td>
+							</tr>
+							<tr>
+								<td>Varicella</td>
+								<td>2 doses if no evidence of immunity</td>
+							</tr>
+							<tr>
+								<td>Hepatitis B</td>
+								<td>2–3 dose series if not immune or vaccinated</td>
+							</tr>
+							<tr>
+								<td>Shingles (RZV)</td>
+								<td>2 doses from age 50+ (or 19+ immunocompromised per ACIP)</td>
+							</tr>
+							<tr>
+								<td>Pneumococcal</td>
+								<td>PCV15/PCV20/PPSV23 per age 65+ or risk conditions</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p style="font-size: 0.85rem; color: var(--calc-muted)">
+					Source to verify: <a href="https://www.cdc.gov/vaccines/schedules/hcp/imz/adult.html" style="color: var(--calc-accent)" target="_blank" rel="noopener noreferrer">CDC adult schedule</a>.
+				</p>
+			</div>
+
+			<div class="calc-panel">
+				<h2>Your last doses (saved locally)</h2>
+				<p style="font-size: 0.85rem; color: var(--calc-muted); margin-top: 0">
+					Dates you enter stay on this device only. Clear browser data removes them.
+				</p>
+				<div class="field">
+					<label for="flu-date">Last influenza vaccine</label>
+					<input type="date" id="flu-date" />
+				</div>
+				<div class="field">
+					<label for="tdap-date">Last Tdap or Td</label>
+					<input type="date" id="tdap-date" />
+				</div>
+				<div class="field">
+					<label for="covid-date">Last COVID dose (if any)</label>
+					<input type="date" id="covid-date" />
+				</div>
+				<button type="button" class="btn" id="save-dates">Save dates</button>
+				<p class="result" id="save-msg" hidden role="status"></p>
+			</div>
+
+			<p class="disclaimer">
+				Travel, pregnancy, immunocompromise, and occupation change recommendations. This page is not your official record.
+			</p>
+		</div>
+		<script src="vaccine-schedule.js"></script>
+	</body>
+</html>

@@ -13,7 +13,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="explorer.css" />
@@ -21,17 +21,19 @@
 	<body class="explorer-page">
 		<div class="site-bridge" role="navigation" aria-label="Site">
 			<div class="site-bridge__inner">
-				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
-				<span class="site-bridge__sep" aria-hidden="true">/</span>
-				<img
-					class="site-bridge__mark"
-					src="../images/healthcare-explorer-logo.svg"
-					width="28"
-					height="28"
-					alt=""
-					decoding="async"
-				/>
-				<span class="site-bridge__here">Florida cost explorer</span>
+				<div class="site-bridge__start">
+					<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+					<span class="site-bridge__sep" aria-hidden="true">/</span>
+					<img
+						class="site-bridge__mark"
+						src="../images/healthcare-explorer-logo.svg"
+						width="28"
+						height="28"
+						alt=""
+						decoding="async"
+					/>
+					<span class="site-bridge__here">Florida cost explorer</span>
+				</div>
 				<a class="site-bridge__back" href="../index.html#header">All projects</a>
 			</div>
 		</div>
@@ -70,15 +72,15 @@
 
 			<section class="callouts" aria-label="Key statistics">
 				<div class="callout">
-					<p class="callout__value" id="callout-spread">—</p>
+					<p class="callout__value" id="callout-spread">-</p>
 					<p class="callout__label">List price gap from lowest to highest hospital (max ÷ min)</p>
 				</div>
 				<div class="callout">
-					<p class="callout__value" id="callout-median-charge">—</p>
+					<p class="callout__value" id="callout-median-charge">-</p>
 					<p class="callout__label">Typical hospital in the middle (median list price)</p>
 				</div>
 				<div class="callout">
-					<p class="callout__value" id="callout-cities" style="font-size: 1rem">—</p>
+					<p class="callout__value" id="callout-cities" style="font-size: 1rem">-</p>
 					<p class="callout__label">One city at the low end vs one at the high end (by hospital average)</p>
 				</div>
 			</section>

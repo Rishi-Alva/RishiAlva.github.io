@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Cost-benefit NPV | Rishi Alva</title>
+		<meta name="description" content="Net present value from constant annual benefit and cost over a horizon." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--biz">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">NPV</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Discounting</p>
+				<h1>Cost-benefit (NPV)</h1>
+				<p class="hero__lead">
+					Constant yearly <strong>net cash benefit</strong> (benefit minus operating cost) and optional <strong>upfront
+					cost</strong> at year 0. Discount rate <em>r</em> per year (e.g. 0.08 for 8%).
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<div class="field-row">
+					<div class="field">
+						<label for="horizon">Horizon (years)</label>
+						<input type="number" id="horizon" min="1" max="50" step="1" value="5" />
+					</div>
+					<div class="field">
+						<label for="r">Discount rate <em>r</em> (decimal)</label>
+						<input type="number" id="r" inputmode="decimal" min="0" max="0.5" step="0.01" value="0.08" />
+					</div>
+				</div>
+				<div class="field-row">
+					<div class="field">
+						<label for="annual">Annual net benefit ($/yr, after year 0)</label>
+						<input type="number" id="annual" inputmode="decimal" step="any" placeholder="12000" />
+					</div>
+					<div class="field">
+						<label for="upfront">Upfront cost at year 0 ($)</label>
+						<input type="number" id="upfront" inputmode="decimal" step="any" placeholder="40000" />
+					</div>
+				</div>
+				<button type="button" class="btn" id="go">Calculate NPV</button>
+				<div class="result" id="out" hidden role="status" aria-live="polite"></div>
+			</div>
+
+			<p class="disclaimer">Flat cash flows are a strong simplification. Taxes, risk premia, and option value are omitted.</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="cost-benefit.js"></script>
+	</body>
+</html>

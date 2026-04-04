@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Prioritization matrix | Rishi Alva</title>
+		<meta name="description" content="Score initiatives on impact and effort (1–5) and bucket into quadrants." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="calculators.css" />
+	</head>
+	<body class="calc-page calc-theme--biz">
+		<div class="site-bridge" role="navigation" aria-label="Site">
+			<div class="site-bridge__inner">
+				<div class="site-bridge__start">
+				<a class="site-bridge__brand" href="../index.html">Rishi Alva</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__calc-home" href="index.html" aria-label="All calculators">
+					<img class="site-bridge__mark" src="../images/calculators-logo.svg" width="28" height="28" alt="" decoding="async" />
+				</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<a class="site-bridge__crumb" href="index.html">Calculators</a>
+				<span class="site-bridge__sep" aria-hidden="true">/</span>
+				<span class="site-bridge__here">Prioritization</span>
+				</div>
+				<a class="site-bridge__back" href="index.html">All calculators</a>
+			</div>
+		</div>
+
+		<div class="wrap">
+			<header class="hero">
+				<p class="hero__eyebrow">Portfolio</p>
+				<h1>Project prioritization matrix</h1>
+				<p class="hero__lead">
+					Rate each item <strong>impact</strong> and <strong>effort</strong> on 1–5 (higher impact is better; lower effort
+					is easier). Midpoint = 3. Quick wins = high impact, low effort.
+				</p>
+			</header>
+
+			<div class="calc-panel">
+				<button type="button" class="btn btn--ghost" id="add-row">Add row</button>
+				<table class="matrix-table" id="grid" aria-label="Initiatives">
+					<thead>
+						<tr>
+							<th>Initiative</th>
+							<th>Impact (1–5)</th>
+							<th>Effort (1–5)</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="tbody"></tbody>
+				</table>
+				<button type="button" class="btn" id="go">Sort into quadrants</button>
+				<div class="matrix-quadrant" id="quads" hidden>
+					<div class="matrix-quadrant__cell">
+						<div class="matrix-quadrant__label">Quick wins</div>
+						<div id="q-qw"></div>
+					</div>
+					<div class="matrix-quadrant__cell">
+						<div class="matrix-quadrant__label">Major bets</div>
+						<div id="q-mb"></div>
+					</div>
+					<div class="matrix-quadrant__cell">
+						<div class="matrix-quadrant__label">Fill-ins</div>
+						<div id="q-fi"></div>
+					</div>
+					<div class="matrix-quadrant__cell">
+						<div class="matrix-quadrant__label">Time sinks</div>
+						<div id="q-ts"></div>
+					</div>
+				</div>
+			</div>
+
+			<p class="disclaimer">Scores are subjective; use with a facilitated rubric for team alignment.</p>
+		</div>
+		<script src="core.js"></script>
+		<script src="prioritization-matrix.js"></script>
+	</body>
+</html>
