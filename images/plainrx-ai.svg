@@ -2,6 +2,5 @@
   <rect width="512" height="512" rx="36" fill="#e8eef5"/>
   <rect x="72" y="88" width="368" height="260" rx="14" fill="#fff" stroke="#1e4a6e" stroke-width="4"/>
   <path d="M108 148h296M108 208h188M108 268h248" stroke="#163a58" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="388" cy="368" r="44" fill="#163a58" opacity="0.12"/>
   <text x="256" y="418" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#163a58">PlainRX AI</text>
 </svg>
