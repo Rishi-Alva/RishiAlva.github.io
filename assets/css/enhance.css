@@ -891,6 +891,15 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+.career-timeline__logo-link {
+	border-bottom: 0 !important;
+	text-decoration: none !important;
+}
+
+.career-timeline__logo-link:hover {
+	border-bottom: 0 !important;
+}
+
 .career-timeline__logo {
 	flex-shrink: 0;
 	width: 40px;
