@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Rishi Alva">
+  <defs>
+    <linearGradient id="ra-bg" x1="8%" y1="0%" x2="92%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="52%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0c1220"/>
+    </linearGradient>
+    <linearGradient id="ra-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#6366f1" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Soft aurora wash (matches enhance.css backdrop vibe) -->
+  <rect width="512" height="512" rx="108" fill="url(#ra-bg)"/>
+  <path fill="url(#ra-glow)" d="M412 64c48 86 48 194 0 280-68 38-156 38-224 0 68-124 156-212 224-280z" opacity="0.9"/>
+  <!-- Monogram -->
+  <text
+    x="256"
+    y="318"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="900"
+    font-size="188"
+    fill="#f9fafb"
+    letter-spacing="-10">RA</text>
+  <!-- Accent bar (site cyan) -->
+  <rect x="148" y="352" width="216" height="16" rx="8" fill="#22d3ee"/>
+</svg>
